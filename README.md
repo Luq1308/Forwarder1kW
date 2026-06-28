@@ -24,7 +24,7 @@ The Forwarder 1kW is a custom-designed power supply module engineered as a cost-
 
 ## Other Resources:
 * YouTube guide video: https://youtu.be/MGMqqtXgwRg
-* Reddit thread:
+* Reddit thread: reddit.com/r/electronics/comments/1uf93w4/
 * Spreadsheet calculation: https://docs.google.com/spreadsheets/d/1iN1n8ODkl2QElmMIK3gC6hOZOITUpqSsXAw9wtJAFAA/
 
 ## Creator's Note
@@ -40,19 +40,21 @@ The power supply is designed to operate within 190-240 volts AC. If you live in 
 
 The board features extensive interfaces. The pins along with their functions are as follow:
 
-FAN PORT: 12V fan with a low-side switch, 500mA load limit.
+FAN PORT (OUTPUT): 12V fan with a low-side switch, 500mA load limit.
 
 CONTROL PORT: To control the main functions of the board.
-* PS_EN = Power stage enable pin (normally 3V, low enable)
-* FAN_EN = Fan enable pin (normally 5V, low enable)
-* CC_IND = Constant current mode indicator (0V = CV, 3.6V = CC)
+* PS_EN = Power stage enable pin (INPUT, normally 3V, low enable)
+* FAN_EN = Fan enable pin (INPUT, normally 5V, low enable)
+* CC_IND = Constant current mode indicator (OUTPUT, 0V = CV, 3.6V = CC)
 
-SENSE PORT: Outputs 0 - 2.5 volts analog signal of the output voltage and current.
+SENSE PORT (OUTPUT): Outputs 0 - 2.5 volts analog signal of the output voltage and current.
 
-VREF PORT: Takes 0 - 2.5 volts analog signal to set the output voltage and current.
+VREF PORT (INPUT): Takes 0 - 2.5 volts analog signal to set the output voltage and current.
 
 You can choose to solder or omit D16. Solder D16 if you want the fan to turn on with the power stage. If you do this, use the pin FAN_EN to enable or disable both the power stage and fan (using the PS_EN will not turn on the fan!). Omit D16 if you have an external microcontroller that controls the fan automatically over FAN_EN.
 
 You can short R41 and R42 if your output voltage is less than 200V and use only single resistor for each. Otherwise, spread the voltage stress across 2 resistors in series.
 
 For high-current applications and you need more precise regulation, you can implement external voltage sensing by breaking JP1 and soldering a sensing wire to the EX_VSENS pad.
+
+The heatsink must be spaced from the board. Use a metal M3 screw, an M3 nylon nut between the heatsink and the board, and a TO-220 washer ring on the bigger hole to better insulate it.
