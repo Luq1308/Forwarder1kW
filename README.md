@@ -24,8 +24,8 @@ The Forwarder 1kW is a custom-designed power supply module engineered as a cost-
 
 ## Other Resources:
 * YouTube guide video: https://youtu.be/MGMqqtXgwRg
-* Reddit thread: reddit.com/r/electronics/comments/1uf93w4/
-* Spreadsheet calculation: https://docs.google.com/spreadsheets/d/1iN1n8ODkl2QElmMIK3gC6hOZOITUpqSsXAw9wtJAFAA/
+* Reddit thread: https://reddit.com/r/electronics/comments/1uf93w4/ 
+* Spreadsheet calculation & bill of materials: https://docs.google.com/spreadsheets/d/1iN1n8ODkl2QElmMIK3gC6hOZOITUpqSsXAw9wtJAFAA/
 
 ## Creator's Note
 * If you decided to create one, please let me know! I'd love to see builds by other people and I may feature yours.
